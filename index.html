@@ -523,11 +523,11 @@
     <nav class="menu">
         <button class="menu-button" id="menu-button">Menú</button>
         <ul class="menu-content" id="menu-content">
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#about-me-section">Sobre Mí</a></li>
-            <li><a href="#cybersecurity-section">Ciberseguridad</a></li>
-            <li><a href="#projects-section">Proyectos</a></li>
-            <li><a href="#contact-section">Contacto</a></li>
+            <li><a href="#home" id="home-section1">Inicio</a></li>
+            <li><a href="#about-me-section" id="about-me-section1">Sobre Mí</a></li>
+            <li><a href="#cybersecurity-section" id="cybersecurity-section1">Ciberseguridad</a></li>
+            <li><a href="#projects-section" id="projects-section1">Proyectos</a></li>
+            <li><a href="#contact-section" id="contact-section1">Contacto</a></li>
         </ul>
         <div class="language-buttons">
             <button class="language-button" id="spanish-button">Español</button>
@@ -546,6 +546,12 @@
                     class="fab fa-linkedin"></i></a>
             <a href="https://instagram.com/mortasoft" target="_blank" aria-label="Instagram"><i
                     class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/mortasoft" target="_blank" aria-label="Twitter"><i
+                    class="fab fa-twitter"></i></a>
+            <a href="https://www.tiktok.com/@mortasoft2" target="_blank" aria-label="TikTok"><i
+                    class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@mortasoft" target="_blank" aria-label="YouTube"><i
+                    class="fab fa-youtube"></i></a>
         </div>
     </section>
 
@@ -567,11 +573,12 @@
             <button><i class="fas fa-search"></i> Análisis de Vulnerabilidades</button>
             <button><i class="fas fa-terminal"></i> Programación</button>
             <button><i class="fas fa-network-wired"></i> Seguridad de Redes</button>
-            <button><i class="fas fa- penetration-testing"></i> Pentesting</button>
+            <button><i class="fas fa-circle-nodes"></i> Pentesting</button>
             <button><i class="fas fa-search-location"></i> OSINT</button>
-            <a href="https://linkedin.com/in/mortasoft" target="_blank" class="linkedin-button">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
+            <button><i class="fas fa-lock"></i> Criptografía</button>
+            <button><i class="fas fa-database"></i> Seguridad de Bases de Datos</button>
+            <button><i class="fas fa-mobile-alt"></i> Seguridad Móvil</button>
+            <button><i class="fas fa-cloud"></i> Seguridad en la Nube</button>
         </div>
     </section>
 
@@ -587,13 +594,49 @@
 
     <section id="projects-section" class="section">
         <h2>Proyectos</h2>
-        <p>Aquí puedes mostrar tus proyectos de ciberseguridad.</p>
-        <ul>
-            <li>Proyecto 1: Análisis de seguridad de una aplicación web.</li>
-            <li>Proyecto 2: Desarrollo de una herramienta de pentesting.</li>
-            <li>Proyecto 3: Investigación sobre una nueva vulnerabilidad.</li>
-        </ul>
+        <p>Aquí puedes ver algunos de mis proyectos de ciberseguridad. ¡Visita los repositorios para ver el código y los detalles!</p>
+        <div class="projects-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Proyecto</th>
+                        <th>Descripción</th>
+                        <th>Enlace</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Scripts de Linux</td>
+                        <td>Scripts Útiles para el uso personal</td>
+                        <td>
+                            <a href="https://github.com/mortasoft/linux-scripts" target="_blank" aria-label="Proyecto 1 en GitHub">
+                                Abrir
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>mysql_password_cracker</td>
+                        <td>Crack MySQL 8.0 caching_sha2_password algorithm passwords using a wordlist</td>
+                        <td>
+                            <a href="https://github.com/mortasoft/mysql_password_cracker" target="_blank" aria-label="Proyecto 2 en GitHub">
+                                Abrir
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Auroxus</td>
+                        <td>Mortasoft Hacking Tool</td>
+                        <td>
+                            <a href="https://github.com/mortasoft/Auroxus" target="_blank" aria-label="Proyecto 3 en GitHub">
+                                Abrir
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
+    
 
     <section id="contact-section" class="section">
         <h2>Contacto</h2>
@@ -780,11 +823,16 @@
             // Objeto con el contenido en ambos idiomas
             const content = {
                 es: {
+                    home: 'Inicio',
+                    aboutMe: 'Sobre Mí',
+                    cybersecurity: 'Ciberseguridad',
+                    projects: 'Proyectos',
+                    contact: 'Contacto',
                     homeTitle: 'Hola, soy Mario Zamora Madriz',
                     homeDescription: 'Master en Cybersecurity | C|CISO, CEH Master, CISA, Security+',
                     aboutMeTitle: 'Sobre Mí',
-                    aboutMeText1: 'Soy un desarrollador apasionado y especialista en ciberseguridad con experiencia en la creación de soluciones digitales seguras y eficientes. Me enfoco en combinar diseño atractivo con funcionalidad robusta y seguridad de primer nivel.',
-                    aboutMeText2: 'Mi objetivo es ayudar a empresas y profesionales a proteger sus activos digitales mientras implementan soluciones tecnológicas innovadoras.',
+                    aboutMeText1: 'Actualmente me desempeño como Chief Information Security Officer (CISO) y especialista en ciberseguridad.',
+                    aboutMeText2: 'Además de la ciberseguridad, me interesa la electrónica, el desarrollo web y el análisis de datos.',
                     cybersecurityTitle: 'Ciberseguridad',
                     cybersecurityList: [
                         'Artículos sobre las últimas tendencias en ciberseguridad.',
@@ -793,22 +841,22 @@
                         'Herramientas y técnicas de hacking ético.'
                     ],
                     projectsTitle: 'Proyectos',
-                    projectsList: [
-                        'Proyecto 1: Análisis de seguridad de una aplicación web.',
-                        'Proyecto 2: Desarrollo de una herramienta de pentesting.',
-                        'Proyecto 3: Investigación sobre una nueva vulnerabilidad.',
-                    ],
                     contactTitle: 'Contacto',
                     contactText1: '¿Interesado en trabajar juntos o tienes alguna pregunta? No dudes en ponerte en contacto conmigo.',
                     contactText2: 'Estoy siempre dispuesto a discutir nuevos proyectos y oportunidades.',
                     emailButton: 'Enviar Email',
                 },
                 en: {
+                    home: 'Home',
+                    aboutMe: 'About Me',
+                    cybersecurity: 'Cybersecurity',
+                    projects: 'Projects',
+                    contact: 'Contact',
                     homeTitle: 'Hello, I\'m Mario Zamora M.',
                     homeDescription: 'CISO | Master in Cybersecurity | C|CISO | CEH Master | CISA | Security+',
                     aboutMeTitle: 'About Me',
-                    aboutMeText1: 'I am a passionate developer and cybersecurity specialist with experience in creating secure and efficient digital solutions. I focus on combining attractive design with robust functionality and top-notch security.',
-                    aboutMeText2: 'My goal is to help companies and professionals protect their digital assets while implementing innovative technological solutions.',
+                    aboutMeText1: 'I currently serve as Chief Information Security Officer (CISO) and cybersecurity specialist.',
+                    aboutMeText2: 'In addition to cybersecurity, I am interested in electronics, web development, and data analysis.',
                     cybersecurityTitle: 'Cybersecurity',
                     cybersecurityList: [
                         'Articles on the latest cybersecurity trends.',
@@ -817,11 +865,6 @@
                         'Ethical hacking tools and techniques.'
                     ],
                     projectsTitle: 'Projects',
-                    projectsList: [
-                        'Project 1: Security analysis of a web application.',
-                        'Project 2: Development of a pentesting tool.',
-                        'Project 3: Research on a new vulnerability.',
-                    ],
                     contactTitle: 'Contact',
                     contactText1: 'Interested in working together or have a question? Do not hesitate to contact me.',
                     contactText2: 'I am always willing to discuss new projects and opportunities.',
@@ -838,6 +881,13 @@
             document.querySelector('#about-me-section p:nth-child(2)').textContent = lang.aboutMeText1;
             document.querySelector('#about-me-section p:nth-child(3)').textContent = lang.aboutMeText2;
             document.querySelector('#cybersecurity-section h2').textContent = lang.cybersecurityTitle;
+            document.querySelector('#cybersecurity-section1').textContent = lang.cybersecurity;
+            document.querySelector('#home-section1').textContent = lang.home;
+            document.querySelector('#about-me-section1').textContent = lang.aboutMe;
+            document.querySelector('#projects-section1').textContent = lang.projects;
+            document.querySelector('#contact-section1').textContent = lang.contact;
+            
+
 
             const cybersecurityList = document.querySelector('#cybersecurity-section ul');
             cybersecurityList.innerHTML = '';
@@ -848,14 +898,7 @@
             });
 
             document.querySelector('#projects-section h2').textContent = lang.projectsTitle;
-            const projectsList = document.querySelector('#projects-section ul');
-            projectsList.innerHTML = '';
-            lang.projectsList.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = item;
-                projectsList.appendChild(li);
-            });
-
+            
             document.querySelector('#contact-section h2').textContent = lang.contactTitle;
             document.querySelector('#contact-section p:nth-child(2)').textContent = lang.contactText1;
             document.querySelector('#contact-section p:nth-child(3)').textContent = lang.contactText2;
