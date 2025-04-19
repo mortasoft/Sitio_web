@@ -1,0 +1,35 @@
+name: Deploy to Raspberry Pi
+
+on:
+  push:
+    branches: [ "main" ] # Cambia "main" a la rama que quieres monitorear
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.7.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Deploy to Raspberry Pi
+      run: |
+        ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} << EOF
+          echo "Iniciando la actualización del sitio..."
+          cd /home/ubuntu # Cambia esta ruta
+          git pull origin main # O la rama que estés usando
+          # Aquí puedes agregar comandos adicionales para construir el sitio si es necesario
+          # Copiar a la ruta del servidor web como sudo 
+          
+          # cp -r /home/ubuntu/sitio_web/* /var/www/html/ # Cambia esta ruta según tu configuración
+          sudo cp -r /home/ubuntu/sitio_web/* /var/www/html/ # Cambia esta ruta según tu configuración
+
+          # Si necesitas reiniciar el servidor web:
+          sudo systemctl restart apache2
+          echo "Sitio actualizado exitosamente."
+        EOF
