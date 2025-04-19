@@ -26,8 +26,7 @@ jobs:
           # Aquí puedes agregar comandos adicionales para construir el sitio si es necesario
           # Copiar a la ruta del servidor web como sudo 
           
-          # cp -r /home/ubuntu/sitio_web/* /var/www/html/ # Cambia esta ruta según tu configuración
-          sudo cp -r /home/ubuntu/sitio_web/* /var/www/html/ # Cambia esta ruta según tu configuración
+          sudo cp -r /home/ubuntu/Sitio_web/* /var/www/html/ # Cambia esta ruta según tu configuración
 
           # Si necesitas reiniciar el servidor web:
           sudo systemctl restart apache2
