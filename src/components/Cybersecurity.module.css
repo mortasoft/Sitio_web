@@ -1,0 +1,141 @@
+.section {
+    padding: 120px 2rem;
+    position: relative;
+    background: rgba(15, 23, 42, 0.3);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.sectionTitle {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.featureGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.featureCard {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+    border-color: rgba(20, 184, 166, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(20, 184, 166, 0.2);
+}
+
+.featureIcon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.featureTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.featureDesc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.listContainer {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+.list {
+    list-style: none;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.listItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 3px solid var(--accent);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.listItem:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(10px);
+    border-left-color: var(--primary);
+}
+
+.bullet {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+    border-radius: 50%;
+    margin-top: 0.5rem;
+}
+
+.itemText {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 1.5rem;
+    }
+    
+    .featureGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .listContainer {
+        padding: 2rem 1.5rem;
+    }
+}

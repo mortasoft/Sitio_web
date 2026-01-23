@@ -1,0 +1,48 @@
+import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom";
+import ParticlesBackground from "./components/ParticlesBackground";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import AboutPage from "./pages/AboutPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import ContactPage from "./pages/ContactPage";
+import NotFoundPage from "./pages/NotFoundPage";
+
+// Layout for pages that need Header and Footer
+const MainLayout = () => {
+  return (
+    <>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        {/* Particles background is always present */}
+        <ParticlesBackground />
+
+        <Routes>
+          {/* Routes with Header and Footer */}
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Route>
+
+          {/* 404 Route without Header and Footer */}
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+export default App;

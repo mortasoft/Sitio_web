@@ -1,0 +1,17 @@
+services:
+  web:
+    build: .
+    container_name: mortasoft-com
+    restart: unless-stopped
+    volumes:
+      # Opcional: Montar nginx.conf para recargar config sin reconstruir imagen
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    environment:
+      - NODE_ENV=production
+    networks:
+      - default
+      - nginxproxymanager_default
+
+networks:
+  nginxproxymanager_default:
+    external: true
