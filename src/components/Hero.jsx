@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaTiktok, FaYoutube, FaEnvelope, FaCode } from "react-icons/fa";
 import styles from "./Hero.module.css";
 
 const Hero = () => {
@@ -40,12 +41,12 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className={styles.cta}
                 >
-                    <a href="#contact" className={styles.primaryBtn}>
-                        Contactar
-                    </a>
-                    <a href="#projects" className={styles.secondaryBtn}>
-                        Ver Proyectos
-                    </a>
+                    <Link to="/contact" className={styles.primaryBtn}>
+                        <FaEnvelope /> Contactar
+                    </Link>
+                    <Link to="/projects" className={styles.secondaryBtn}>
+                        <FaCode /> Ver Proyectos
+                    </Link>
                 </motion.div>
 
                 <motion.div
