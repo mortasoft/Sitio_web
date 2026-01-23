@@ -1,16 +1,86 @@
-# React + Vite
+# MORTASOFT - Mario Zamora Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenido al repositorio del sitio web personal y portafolio profesional de **Mario Zamora Madriz**. Este proyecto es una aplicación web moderna (SPA) construida con **React** y **Vite**, diseñada para mostrar experiencia profesional, proyectos y habilidades en Ciberseguridad y Desarrollo.
 
-Currently, two official plugins are available:
+![Portfolio Preview](public/preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías
 
-## React Compiler
+Este proyecto utiliza un stack moderno enfocado en rendimiento y experiencia de usuario:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Core:** [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+*   **Routing:** [React Router 7](https://reactrouter.com/)
+*   **Animaciones:** [Framer Motion](https://www.framer.com/motion/)
+*   **Efectos:** [tsParticles](https://particles.js.org/) (Fondo interactivo)
+*   **Estilos:** CSS Modules + Variables CSS (Diseño Glassmorphism)
+*   **Iconos:** React Icons (FontAwesome, etc.)
+*   **Despliegue:** Docker + Nginx
 
-## Expanding the ESLint configuration
+## ✨ Características
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*   **Diseño Premium:** Interfaz oscura con efecto "Glassmorphism" (vidrio esmerilado) y degradados modernos.
+*   **Fondo Interactivo:** Partículas dinámicas que reaccionan al movimiento del mouse (efecto repulsión).
+*   **Navegación Fluida:** Transiciones suaves entre páginas (Inicio, Sobre Mí, Proyectos, Contacto).
+*   **Portafolio Dinámico:** Página de proyectos con buscador en tiempo real y filtrado por categorías.
+*   **Página 404 Personalizada:** Diseño único para rutas no encontradas.
+*   **Responsive:** Totalmente adaptado a dispositivos móviles y escritorio.
+
+## 🛠️ Instalación y Ejecución Local
+
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone https://github.com/mortasoft/Sitio_web.git
+    cd Sitio_web
+    ```
+
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
+
+3.  **Iniciar servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+    El sitio estará disponible en `http://localhost:5173`.
+
+## 🐳 Ejecución con Docker
+
+El proyecto incluye configuración lista para producción usando Docker y Nginx.
+
+1.  **Construir y levantar el contenedor:**
+    ```bash
+    docker-compose up -d --build
+    ```
+
+2.  **Acceder al sitio:**
+    Abre tu navegador en `http://localhost:8080`.
+
+    Para detener el contenedor:
+    ```bash
+    docker-compose down
+    ```
+
+## 📂 Estructura del Proyecto
+
+```
+/src
+  /components     # Componentes reutilizables (Header, Footer, Particles...)
+  /pages          # Vistas principales (Home, About, Projects...)
+  /assets         # Imágenes y recursos estáticos
+  App.jsx         # Configuración principal y Router
+  index.css       # Estilos globales y variables
+/public           # Archivos públicos estáticos
+Dockerfile        # Configuración de construcción Docker
+nginx.conf        # Configuración del servidor Nginx
+```
+
+## 👤 Autor
+
+**Mario Zamora Madriz**
+*   Master en Ciberseguridad | C|CISO | CISA | CEH Master
+*   [LinkedIn](https://www.linkedin.com/in/mario-zamora-madriz-b6846025/)
+*   [GitHub](https://github.com/mortasoft)
+
+---
+© 2026 Mortasoft. Todos los derechos reservados.
