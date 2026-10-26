@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom";
-import { 
-    FaGithub, 
-    FaLinkedin, 
-    FaInstagram, 
-    FaTwitter, 
-    FaTiktok, 
-    FaYoutube, 
-    FaShieldAlt, 
-    FaEnvelope, 
-    FaMapMarkerAlt, 
-    FaClock, 
-    FaArrowRight, 
-    FaLock 
+import {
+    FaGithub,
+    FaLinkedin,
+    FaInstagram,
+    FaTwitter,
+    FaTiktok,
+    FaYoutube,
+    FaShieldAlt,
+    FaEnvelope,
+    FaMapMarkerAlt,
+    FaClock,
+    FaArrowRight,
+    FaLock
 } from "react-icons/fa";
 import styles from "./Footer.module.css";
 
-const Footer = () => {
+const Footer = ({ isHome = false }) => {
     const currentYear = new Date().getFullYear();
 
     const socialLinks = [
@@ -46,20 +46,8 @@ const Footer = () => {
     const credentials = ["C|CISO", "CEH Master", "CISA", "Security+", "CHFI"];
 
     return (
-        <footer className={styles.footer}>
+        <footer className={`${styles.footer} ${isHome ? styles.parallaxFooter : ""}`}>
             <div className={styles.container}>
-                {/* Action / Collaboration Banner */}
-                <div className={styles.ctaBanner}>
-                    <div className={styles.ctaContent}>
-                        <h2 className={styles.ctaTitle}>¿Planeando una iniciativa de ciberseguridad o conferencia?</h2>
-                        <p className={styles.ctaSubtitle}>
-                            Colaboración estratégica con organizaciones, universidades y equipos de ingeniería en gestión de riesgos y seguridad avanzada.
-                        </p>
-                    </div>
-                    <Link to="/contact" className={styles.ctaButton}>
-                        Iniciar contacto <FaArrowRight />
-                    </Link>
-                </div>
 
                 {/* Main 4-Column Grid */}
                 <div className={styles.mainGrid}>
@@ -72,11 +60,7 @@ const Footer = () => {
                         <p className={styles.tagline}>
                             Mario Zamora Madriz. Master en Ciberseguridad, CISO e investigador enfocado en resiliencia digital y defensa proactiva.
                         </p>
-                        
-                        <div className={styles.statusBadge}>
-                            <span className={styles.statusDot}></span>
-                            <span>Disponible para ponencias y asesorías</span>
-                        </div>
+
 
                         <div className={styles.credentialsRow}>
                             {credentials.map((cred) => (

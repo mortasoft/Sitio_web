@@ -27,6 +27,10 @@ const ParticlesBackground = () => {
             id="tsparticles"
             loaded={particlesLoaded}
             options={{
+                fullScreen: {
+                    enable: true,
+                    zIndex: 3,
+                },
                 background: {
                     color: {
                         value: "transparent",
@@ -102,7 +106,7 @@ const ParticlesBackground = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                zIndex: 1, // Z-index bajo para estar detras
+                zIndex: 3, // Layer above hero background curtain, behind interactive content
                 pointerEvents: "none" // Permite clics a través
             }}
         />

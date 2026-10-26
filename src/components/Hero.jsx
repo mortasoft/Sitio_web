@@ -4,6 +4,13 @@ import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaTiktok, FaYoutube, FaEn
 import styles from "./Hero.module.css";
 
 const Hero = () => {
+    const scrollToFooter = () => {
+        const footer = document.querySelector("footer");
+        if (footer) {
+            footer.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <section id="home" className={styles.hero}>
             <div className={styles.content}>
@@ -67,6 +74,21 @@ const Hero = () => {
                     </a>
                 </motion.div>
             </div>
+
+            <motion.button
+                type="button"
+                onClick={scrollToFooter}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 1 }}
+                className={styles.scrollIndicator}
+                aria-label="Desplazarse para explorar el pie de página"
+            >
+                <span className={styles.scrollText}>Desliza para explorar</span>
+                <div className={styles.scrollMouse}>
+                    <div className={styles.scrollWheel} />
+                </div>
+            </motion.button>
         </section>
     );
 };

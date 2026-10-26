@@ -100,14 +100,20 @@
     background: none;
     border: none;
     color: var(--text-primary);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     cursor: pointer;
     z-index: 1001;
-    transition: opacity 0.2s ease;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 
 .mobileToggle:hover {
-    opacity: 0.8;
+    background: var(--surface-raised);
 }
 
 .mobileOverlay {
@@ -116,6 +122,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     background: rgba(9, 13, 22, 0.98);
     backdrop-filter: blur(20px);
     display: flex;
@@ -123,49 +130,68 @@
     align-items: center;
     justify-content: center;
     z-index: 999;
+    padding: 2rem 1.5rem;
     gap: 2rem;
 }
 
 .mobileOverlay ul {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     text-align: center;
     list-style: none;
+    width: 100%;
+    max-width: 320px;
+    padding: 0;
+    margin: 0;
 }
 
 .mobileOverlay a {
     font-family: var(--font-display);
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-primary);
     text-decoration: none;
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition: color 0.2s ease, background-color 0.2s ease;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    gap: 0.85rem;
+    min-height: 48px;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
 }
 
 .mobileOverlay .navIcon {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--primary-light);
 }
 
 .mobileOverlay a:hover {
-    color: var(--primary-light);
-    transform: translateX(4px);
+    color: #ffffff;
+    background: var(--surface-raised);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
     .desktopMenu {
         display: none;
     }
     
     .mobileToggle {
-        display: block;
+        display: inline-flex;
     }
     
     .container {
-        padding: 0 1.5rem;
+        padding: 0 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 0 1rem;
     }
 }

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Outlet, useLocation } from "react-router-dom";
 import ParticlesBackground from "./components/ParticlesBackground";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -13,13 +13,16 @@ import SEO from "./components/SEO";
 
 // Layout for pages that need Header and Footer
 const MainLayout = () => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
     <>
       <Header />
       <main>
         <Outlet />
       </main>
-      <Footer />
+      <Footer isHome={isHome} />
     </>
   );
 };

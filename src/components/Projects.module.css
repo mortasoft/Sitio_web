@@ -193,7 +193,7 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: 80px 1.5rem;
+        padding: 80px 1.25rem;
     }
     
     .grid {
@@ -206,5 +206,24 @@
     
     .cardFooter {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 60px 1rem;
+    }
+    
+    .cardContent {
+        padding: 1.25rem 1rem;
+    }
+    
+    .cardFooter {
+        padding: 0 1rem 1.25rem;
+    }
+    
+    .link {
+        width: 100%;
+        justify-content: center;
     }
 }
