@@ -9,6 +9,8 @@ import TalksPage from "./pages/TalksPage";
 import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
+import SEO from "./components/SEO";
+
 // Layout for pages that need Header and Footer
 const MainLayout = () => {
   return (
@@ -25,6 +27,7 @@ const MainLayout = () => {
 function App() {
   return (
     <Router>
+      <SEO />
       <div className="App">
         {/* Particles background is always present */}
         <ParticlesBackground />
