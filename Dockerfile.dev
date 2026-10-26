@@ -1,0 +1,18 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Copiar archivos de dependencias para aprovechar la caché de Docker
+COPY package*.json ./
+
+# Instalar todas las dependencias (incluyendo devDependencies)
+RUN npm install
+
+# Copiar el código fuente
+COPY . .
+
+# Exponer el puerto por defecto de Vite
+EXPOSE 5173
+
+# Ejecutar el servidor de desarrollo escuchando en todas las interfaces de red
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]

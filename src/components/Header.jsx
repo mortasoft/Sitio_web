@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaBars, FaTimes, FaHome, FaUser, FaCode, FaEnvelope } from "react-icons/fa";
+import { FaBars, FaTimes, FaHome, FaUser, FaCode, FaEnvelope, FaMicrophone } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Header.module.css";
 
@@ -20,6 +20,7 @@ const Header = () => {
     const navLinks = [
         { name: "Inicio", path: "/", icon: <FaHome /> },
         { name: "Sobre Mí", path: "/about", icon: <FaUser /> },
+        { name: "Ponencias", path: "/talks", icon: <FaMicrophone /> },
         { name: "Proyectos", path: "/projects", icon: <FaCode /> },
         { name: "Contacto", path: "/contact", icon: <FaEnvelope /> },
     ];

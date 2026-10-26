@@ -6,19 +6,11 @@ import styles from "./Hero.module.css";
 const Hero = () => {
     return (
         <section id="home" className={styles.hero}>
-            {/* Floating Shapes Background */}
-            <div className={styles.floatingShapes}>
-                <div className={`${styles.shape} ${styles.shape1}`}></div>
-                <div className={`${styles.shape} ${styles.shape2}`}></div>
-                <div className={`${styles.shape} ${styles.shape3}`}></div>
-            </div>
-
             <div className={styles.content}>
-
                 <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
+                    transition={{ duration: 0.6 }}
                     className={styles.title}
                 >
                     Hola, soy <span className={styles.highlight}>Mario Zamora</span>

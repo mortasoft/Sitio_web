@@ -1,41 +1,7 @@
 import { motion } from "framer-motion";
 import { FaBriefcase, FaGraduationCap, FaAward, FaCertificate, FaChalkboardTeacher, FaMicrophone, FaMapMarkerAlt, FaCalendarAlt, FaExternalLinkAlt } from "react-icons/fa";
+import { presentations } from "../data/presentations";
 import styles from "./AboutPage.module.css";
-
-const presentations = [
-    {
-        title: "Resiliencia digital y brechas de gestión: Una mirada a la ciberseguridad desde la fiscalización de la CGR",
-        event: "Jornadas de investigación Ciberseguridad y resiliciencia digital en tiempos contemporáneos",
-        organizer: "Universidad de Costa Rica",
-        location: "Virtual",
-        date: "Noviembre 2025",
-        link: "https://ejemplo.com/ponencia1" // Reemplazar con el enlace real
-    },
-    {
-        title: "Ciberseguridad en la Inteligencia Artificial",
-        event: "Ciclo de Conferencias OIJ Cibercrimen y Ciberseguridad",
-        organizer: "Organismo de Investigación Judicial",
-        location: "San José, Costa Rica",
-        date: "Octubre 2025",
-        link: "https://ejemplo.com/ponencia2" // Reemplazar con el enlace real
-    },
-    {
-        title: "Panel: Ciberseguridad en la era de la IA: ¿Aliado o amenaza?",
-        event: "CyberSec Summit 2025",
-        organizer: "ITNow",
-        location: "San José, Costa Rica",
-        date: "Junio 2025",
-        link: "https://www.itnow.connectab2b.com/post/cybersec-summit-costa-rica-2025-es-la-ia-un-aliado-o-una-amenaza" // Reemplazar con el enlace real
-    },
-    {
-        title: "Computación Cuántica y Ciberseguridad",
-        event: "Congreso Latinoamericano de ciberseguridad 2024",
-        organizer: "CyberSec LATAM",
-        location: "San José, Costa Rica",
-        date: "Noviembre 2024",
-        link: "https://cybersec-latam.com/"
-    },
-];
 
 const certifications = [
     { name: "CISA", org: "ISACA", logo: "/images/logos/ISACA_logo.png" },

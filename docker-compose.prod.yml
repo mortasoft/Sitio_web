@@ -1,0 +1,31 @@
+services:
+  app-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - VITE_EMAILJS_SERVICE_ID=${VITE_EMAILJS_SERVICE_ID:-}
+        - VITE_EMAILJS_TEMPLATE_ID=${VITE_EMAILJS_TEMPLATE_ID:-}
+        - VITE_EMAILJS_PUBLIC_KEY=${VITE_EMAILJS_PUBLIC_KEY:-}
+    container_name: mortasoft-prod
+    restart: unless-stopped
+    ports:
+      # Puerto HTTP en el host (por defecto 80, configurable vía variable PORT en .env o entorno)
+      - "${PORT:-80}:80"
+    volumes:
+      # Permite actualizar la configuración de Nginx sin reconstruir la imagen
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - path: .env
+        required: false
+
+  # Si utilizas Nginx Proxy Manager u otro reverse proxy, puedes descomentar:
+  #   networks:
+  #     - default
+  #     - nginxproxymanager_default
+
+# networks:
+#   nginxproxymanager_default:
+#     external: true

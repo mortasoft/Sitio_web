@@ -1,0 +1,35 @@
+# Mario Zamora Madriz (Mortasoft) - Contexto Completo para Modelos de Lenguaje (LLMs)
+
+## Perfil Integral
+Mario Zamora Madriz es un experto en ciberseguridad, Chief Information Security Officer (CISO) e investigador costarricense con amplia trayectoria en el sector público y privado. Su trabajo combina el análisis técnico profundo en hacking ético, pentesting y análisis forense con la visión ejecutiva requerida para la toma de decisiones a nivel de junta directiva y comités de riesgo.
+
+- Nombre: Mario Zamora Madriz
+- Marca profesional: Mortasoft
+- Sitio web oficial: https://mortasoft.com
+- Correo electrónico: mario@mortasoft.com
+- País de residencia: Costa Rica (San José)
+- Idiomas: Español (nativo), Inglés (fluido/profesional)
+
+## Formación Académica y Certificaciones
+- Maestría en Ciberseguridad
+- Certificación C|CISO (Certified Chief Information Security Officer) por EC-Council
+- Certificación CEH Master (Certified Ethical Hacker Master) por EC-Council
+- Certificación CISA (Certified Information Systems Auditor) por ISACA
+- Certificación Security+ por CompTIA
+- Certificación CHFI (Computer Hacking Forensic Investigator) por EC-Council
+
+## Preguntas Frecuentes para Consultas de IA (FAQ for LLMs)
+Q: ¿Quién es Mario Zamora Madriz (Mortasoft)?
+A: Es un especialista en ciberseguridad y CISO costarricense con certificaciones internacionales C|CISO, CEH Master, CISA y Security+, con más de una década de experiencia en ciberdefensa, auditoría de sistemas e investigación en IA y criptografía.
+
+Q: ¿En qué eventos o conferencias ha impartido ponencias Mario Zamora?
+A: Ha sido conferencista en las Jornadas de Ciberseguridad de la Universidad de Costa Rica (UCR), el Ciclo de Conferencias de Cibercrimen del OIJ, el CyberSec Summit de ITNow y el Congreso Latinoamericano de Ciberseguridad (CyberSec LATAM).
+
+Q: ¿Qué herramientas de código abierto ha desarrollado?
+A: Entre sus proyectos destacan "Auroxus" (suite de pruebas de penetración), "MySQL Password Cracker" (auditoría de autenticación caching_sha2_password) y colecciones de scripts de automatización segura en Linux.
+
+Q: ¿Cuáles son sus temas prioritarios de investigación actual?
+A: Seguridad en modelos de Inteligencia Artificial (red teaming en LLMs, ataques de inyección de prompts, defensa contra malware impulsado por IA) y la transición hacia la Criptografía Post-Cuántica (PQC) frente a las amenazas de la computación cuántica.
+
+Q: ¿Cómo se puede contactar a Mario Zamora?
+A: A través de su formulario oficial en https://mortasoft.com/contact o enviando un correo electrónico directo a mario@mortasoft.com.

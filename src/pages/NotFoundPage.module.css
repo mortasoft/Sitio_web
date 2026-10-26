@@ -23,16 +23,13 @@
 }
 
 .errorCode {
-    font-size: 8rem;
+    font-family: var(--font-display);
+    font-size: 7.5rem;
     font-weight: 800;
     line-height: 1;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #f8fafc 0%, #818cf8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    /* Fallback */
-    color: #818cf8;
+    color: var(--primary-light);
+    letter-spacing: -0.04em;
 }
 
 .title {

@@ -1,0 +1,46 @@
+# robots.txt para Mortasoft (Mario Zamora Madriz)
+# Permite rastreo general e indexación especializada para buscadores y modelos de IA (LLMs)
+
+User-agent: *
+Allow: /
+Disallow: /_backup/
+
+# Motores de búsqueda tradicionales
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Rastreadores y motores de IA / LLMs (Optimización GEO y consultas de IA)
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Mapa del sitio y contexto para LLMs
+Sitemap: https://mortasoft.com/sitemap.xml

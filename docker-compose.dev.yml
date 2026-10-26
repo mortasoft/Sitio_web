@@ -1,0 +1,20 @@
+services:
+  app-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: mortasoft-dev
+    ports:
+      - "5173:5173"
+    volumes:
+      # Monta el código local para Hot Module Replacement (HMR)
+      - .:/app
+      # Evita sobreescribir node_modules del contenedor con los del host
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - USE_POLLING=true
+    env_file:
+      - path: .env
+        required: false
+    restart: unless-stopped
